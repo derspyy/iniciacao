@@ -5,7 +5,7 @@ in_search_index = true
 peso = "8"
 idade = "3"
 especie = "Cachorro"
-raca = "Labrados"
+raca = "Labrador"
 porte = "sim"
 +++
 
