@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> {{ page.title }}</h1>
+<h3>{{ page.extra.especie}} 🐾 {{ page.extra.raca}}</h3>
+
+<div style="display: flex; flex-wrap: wrap";>
+    <image style="margin: auto; max-height: 100px; border-radius: 10px" src="/{{ page.slug }}/imagem.jpg" />
+    <image style="margin: auto; max-height: 100px; border-radius: 10px" src="/{{ page.slug }}/imagem2.jpg" />
+    <image style="margin: auto; max-height: 100px; border-radius: 10px" src="/{{ page.slug }}/imagem3.jpg" />
+</div>
+<ul>
+    <li> {{ page.extra.idade}} anos</li>
+    <li> {{ page.extra.peso}} kg</li>
+</ul>
+<hr>
+<p>{{ page.content | safe }}</p>
+<hr>
+<a href="/bixinhos"><i>Voltar</i></a>
+
+{% endblock content %}

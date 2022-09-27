@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+    {{ section.title }}
+</h1>
+    {% for page in section.pages %}
+        <hr>
+        <h1> {{ page.title }}</h1>
+        <h3>{{ page.extra.especie}} 🐾 {{ page.extra.raca}}</h3>
+        <image style="margin: auto; max-height: 300px; display: block; border-radius: 10px" src="/{{ page.slug }}/imagem.jpg">
+        <ul>
+            <li> {{ page.extra.idade}} anos</li>
+            <li> {{ page.extra.peso}} kg</li>
+        </ul>
+        <a href="bixinhos/{{ page.slug }}"><i>Saiba Mais</i></a>
+    {% endfor %}
+
+{% endblock content %}
